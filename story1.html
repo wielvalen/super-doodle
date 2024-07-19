@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Keren</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f06, #4a90e2);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        p {
+            margin: 0.5em 0 1em;
+        }
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background: #ddd;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DUDUH CANTIKNYA!</h1>
+        <p>BOLEH TAU NAMANYA?:</p>
+        <input type="text" id="nameInput" placeholder="Nama Anda">
+        <br>
+        <button id="myButton">LANJUTKAN</button>
+    </div>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                alert('Terima kasih, ' + name + ', telah mengunjungi!');
+                window.location.href = 'http://127.0.0.1:5501/mystory/story2.html'; // Ganti dengan URL halaman yang diinginkan
+            } else {
+                alert('Silakan masukkan nama Anda terlebih dahulu.');
+            }
+        });
+    </script>
+</body>
+</html>
